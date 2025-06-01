@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  border-radius: 12px;
+  padding: 4px; /* border thickness */
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 1400% 1400%;
+  animation: rainbow 10s ease infinite;
+}
+
+.animation > .content {
+  border-radius: 8px;
+  background: white; /* background inside border */
+  padding: 1rem;
+}
