@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="draftsState">
+      <draftsState>
+        <option name="requests">
+          <list>
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="raw" value="{&#10;  &quot;clerkId&quot;: &quot;user_123&quot;,&#10;  &quot;name&quot;: &quot;Test User&quot;,&#10;  &quot;bio&quot;: &quot;This is a test user&quot;&#10;}" />
+                  <option name="type" value="JSON" />
+                </bodyState>
+              </option>
+              <option name="id" value="b8bd2c4b-cb47-47de-b2cf-32b8935b3ad8" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/profiles" />
+            </requestState>
+          </list>
+        </option>
+      </draftsState>
+    </option>
+    <option name="id" value="ebca6d04-ba20-457d-8234-3f6b6aa17536" />
+    <option name="version" value="6" />
+  </component>
+</project>
