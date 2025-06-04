@@ -28,7 +28,7 @@ function RouteComponent() {
             </a>
           </p>
         </div>
-        <div className="border-2 border-white bg-slate-800 gap-20 mt-10 pb-10 pt-4 w-[80%] max-w-xl rounded-4xl mx-auto justify-center">
+        <div className="border-2 mx-auto border-white bg-slate-800 gap-20 mt-10 pb-10 pt-4 max-w-xl rounded-4xl mx-auto justify-center">
           <h1
             style={{
               fontFamily: "'Montserrat', sans-serif",
@@ -39,7 +39,7 @@ function RouteComponent() {
           >
             Socials
           </h1>
-          <div className="flex items-center gap-16 align-center mb-10 justify-center">
+          <div className="flex items-center gap-10 align-center mb-10 justify-center">
             <a
               href="https://www.instagram.com/nikitamokhonko/"
               target="_blank"
@@ -48,7 +48,7 @@ function RouteComponent() {
               <img
                 src="/instagram-logo.png"
                 alt="Instagram"
-                className="w-40 rounded-full border-2 border-white h-40 mt-6 "
+                className="w-30 rounded-full ml-5 border-2 border-white h-30 mt-6 "
               />
             </a>
             <a
@@ -59,7 +59,7 @@ function RouteComponent() {
               <img
               src="/github-logo.png"
               alt="Github"
-              className="w-40 h-40 bg-white mt-6 rounded-full border-2 border-white"
+              className="w-30 h-30 bg-white mt-6 mr-5 rounded-full border-2 border-white"
               />
             </a>
           </div>
