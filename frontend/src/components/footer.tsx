@@ -1,9 +1,21 @@
+import { useNavigate } from "@tanstack/react-router";
+
 export default function Footer() {
+  const navigate = useNavigate();
   return (
     <header className="bg-gray-800 w-full border-t-1 border-white">
       <div className="flex items-center justify-center">
-        <a className="text-white">About</a>
-        <a className="text-white ml-5">Contact</a>
+        <a
+          onClick={() => navigate({ to: "/about" })}
+          className="text-white cursor-pointer">
+          About
+        </a>
+        <a
+          onClick={() => navigate({ to: "/contact" })}
+          className="text-white ml-5 cursor-pointer"
+        >
+          Contact
+        </a>
         <h1
           style={{
             fontFamily: "'Montserrat', sans-serif",
