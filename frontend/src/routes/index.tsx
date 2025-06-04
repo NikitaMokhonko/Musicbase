@@ -14,7 +14,7 @@ function LandingPage() {
         id="border"
         className="mx-auto rounded-2xl w-100 border-black flex flex-col mt-25 mb-5 items-center justify-center"
       >
-        <h1 className="text-5xl text-white text-left leading-[1.1]">
+        <h1 className="md:text-5xl text-4xl text-white text-left leading-[1.1]">
           Create your <br />
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
           <span className="underline decoration-pink-500 underline-offset-6">
