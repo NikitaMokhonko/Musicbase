@@ -6,16 +6,20 @@
         <option name="requests">
           <list>
             <requestState>
+              <option name="auth">
+                <authState>
+                  <option name="type" value="NO_AUTH" />
+                </authState>
+              </option>
               <option name="body">
                 <bodyState>
-                  <option name="raw" value="{&#10;  &quot;clerkId&quot;: &quot;user_123&quot;,&#10;  &quot;name&quot;: &quot;Test User&quot;,&#10;  &quot;bio&quot;: &quot;This is a test user&quot;&#10;}" />
                   <option name="type" value="JSON" />
                 </bodyState>
               </option>
               <option name="id" value="b8bd2c4b-cb47-47de-b2cf-32b8935b3ad8" />
-              <option name="method" value="POST" />
+              <option name="method" value="DELETE" />
               <option name="name" value="Draft" />
-              <option name="url" value="http://localhost:8080/api/profiles" />
+              <option name="url" value="http://localhost:8080/api/profiles/user_2xon8z8ugaFyhPYKHuPTJdj4qZA" />
             </requestState>
           </list>
         </option>
