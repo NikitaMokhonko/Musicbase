@@ -32,16 +32,16 @@ export function SongList({
   getSafeUrl,
 }: SongListProps) {
   return (
-    <div className="w-full flex pt-5 pb-5 border-t-2 border-white flex-col items-center">
+    <div className="w-full flex pb-5  flex-col items-center">
       {orderedCategories.map((category) => (
         <div
           key={category}
           className="mb-6 w-full max-w-md mx-auto flex flex-col items-center"
         >
-          <h2 className="text-3xl text-white mb-6 mt-2 underline underline-offset-6 decoration-pink-500">
+          <h2 className="text-3xl text-white mb-8 underline underline-offset-6 decoration-pink-500">
             {category}
           </h2>
-          <ul className="flex flex-col bg-gray-700 sm:rounded-none border-2 md:rounded-4xl px-2 py-1 border-white items-center w-full">
+          <ul className="flex flex-col bg-violet-700 rounded-none md:border-2 md:rounded-3xl px-2 py-1 border-purple-300 items-center w-full">
             {(groupedSongs[category] as Song[]).map((song) => (
               <li
                 key={song.id}
@@ -59,7 +59,7 @@ export function SongList({
                     <b>{song.name || "Untitled"}</b>
                     <a
                       href={getSafeUrl(song.url)}
-                      className="underline text-pink-500"
+                      className="underline text-blue-400"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
