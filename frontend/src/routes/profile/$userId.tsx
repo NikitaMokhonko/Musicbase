@@ -45,7 +45,11 @@ function RouteComponent() {
   const addSong = useSongMutation(token);
   const updateSong = useSongUpdateMutation(token);
   const deleteSong = useSongDeleteMutation(token);
-  const [newSong, setNewSong] = useState({ name: "", url: "", category: "" });
+  const [newSong, setNewSong] = useState<null | {
+    name: string;
+    url: string;
+    category: string;
+  }>(null);
   const [editingSongId, setEditingSongId] = useState<string | null>(null);
   const [songEditForm, setSongEditForm] = useState({
     name: "",
@@ -139,19 +143,24 @@ function RouteComponent() {
     deleteSong.mutate({ songId, userId: profileUserId });
   };
   const handleAddSong = () => {
-    if (!newSong.url.trim() || !newSong.category.trim() || !newSong.name.trim())
+    if (
+      !newSong ||
+      !newSong.url.trim() ||
+      !newSong.category.trim() ||
+      !newSong.name.trim()
+    )
       return;
     addSong.mutate(
       { ...newSong, userId: profileUserId },
       {
-        onSuccess: () => setNewSong({ name: "", url: "", category: "" }),
+        onSuccess: () => setNewSong(null),
       }
     );
   };
 
   return (
     <>
-      <div className="mt-15 border-2 bg-slate-800 rounded-4xl flex flex-col justify-center items-center border-white w-[80%] max-w-xl mb-10 mx-auto text-center min-h-[80vh]">
+      <div className="mt-15 border-2 bg-slate-800 rounded-4xl flex flex-col justify-center items-center border-purple-300 w-[80%] max-w-xl mb-10 mx-auto text-center min-h-[80vh]">
         <ProfileBioHeader profile={profile} />
         {isOwner && showProfile && !editing && (
           <ProfileActions
@@ -195,14 +204,12 @@ function RouteComponent() {
         )}
         {isOwner && (
           <div className="w-full flex flex-col items-center">
-            {newSong.name === "" &&
-            newSong.url === "" &&
-            newSong.category === "" ? (
+            {newSong === null ? (
               <div className="flex justify-center w-full">
                 <button
                   className="bg-pink-500 mb-5 px-4 py-2 rounded-4xl w-30 border-2 text-white hover:cursor-pointer"
                   onClick={() =>
-                    setNewSong({ name: " ", url: " ", category: " " })
+                    setNewSong({ name: "", url: "", category: "" })
                   }
                 >
                   Add Song
@@ -213,7 +220,7 @@ function RouteComponent() {
                 newSong={newSong}
                 setNewSong={setNewSong}
                 onSubmit={handleAddSong}
-                onCancel={() => setNewSong({ name: "", url: "", category: "" })}
+                onCancel={() => setNewSong(null)}
               />
             )}
           </div>
